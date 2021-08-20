@@ -164,8 +164,8 @@ def main():
     print('current directory: ', os.getcwd() )
     
     ## NEW LAB PATH
-    output_folder_orig = '/disk2/kishore/kishore_data/outlets'#'/home/kishore/kishore_data/outlets'
-    data_folder_orig =  '/disk2/kishore/fan_backup/Old_code/news/outlets'#'/home/kishore/fan_backup/Old_code/news/outlets'
+    output_folder_orig = '/disk2/path/path_data/outlets'#'/home/path/path_data/outlets'
+    data_folder_orig =  '/disk2/path/path_backup/Old_code/news/outlets'#'/home/path/path_backup/Old_code/news/outlets'
 
     outlet_list = [ 'DailyMail' ,'foxnews', 'theguardian', 'wsj','Archiveis']#, 'NewYorkTimes']
     for outlet in outlet_list:

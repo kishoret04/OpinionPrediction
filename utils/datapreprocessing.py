@@ -249,7 +249,7 @@ def create_file_comment_emotion(data_folder,output_folder):
 
 def create_pickle_freqauthor( data_folder,output_folder):
     file_author = os.path.join( data_folder, 'frequent_author_record.json')
-    #  '/home/kishore/fan_backup/Old_code/news/outlets/NewYorkTimes/frequent_author_record.json'
+    #  '/home/path/path_backup/Old_code/news/outlets/NewYorkTimes/frequent_author_record.json'
     js_authors = json.load(open( file_author))
     df_authors = pd.DataFrame( list(js_authors.items()), columns = ['author','comments'])
     df_authors.set_index('author', inplace = True)
@@ -263,11 +263,11 @@ def main():
     print('current directory: ', os.getcwd() )
     print(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
     ## NEW LAB PATH
-    output_folder_1 = '/disk2/kishore/kishore_data/outlets'#'/home/kishore/kishore_data/outlets'
-    data_folder_1 = '/disk2/kishore/kishore_data/Fancode_workspace/fan_backup/Old_code/news/outlets'#'/home/kishore/fan_backup/Old_code/news/outlets'
+    output_folder_1 = '/disk2/path/path_data/outlets'#'/home/path/path_data/outlets'
+    data_folder_1 = '/disk2/path/path_data/pathcode_workspace/path_backup/Old_code/news/outlets'#'/home/path/path_backup/Old_code/news/outlets'
     # ##SABINE PATH 
-    # output_folder = '/project/mukherjee/kishore/news_code/output'
-    # data_folder = '/project/mukherjee/kishore/news_code/outlets'
+    # output_folder = '/project/mukherjee/path/news_code/output'
+    # data_folder = '/project/mukherjee/path/news_code/outlets'
     # outlet = 'Archiveis'#'NewYorkTimes'
     outlet_list = [ 'foxnews', 'theguardian', 'wsj','Archiveis','NewYorkTimes','DailyMail']
     for outlet in outlet_list:

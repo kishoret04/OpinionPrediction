@@ -36,7 +36,7 @@ class FingerprintModel(pl.LightningModule):
         self.train_perf = {'vader': 0, 'flair': 0, 'sent': 0, 'subj': 0, 'emotion': 0, 'mean': 0}
         self.dev_perf   = {'vader': 0, 'flair': 0, 'sent': 0, 'subj': 0,'emotion': 0, 'mean': 0}
         self.test_perf  = {'vader': 0, 'flair': 0, 'sent': 0, 'subj': 0,'emotion': 0, 'mean': 0}
-        ###############kishore_update#######################################
+        ###############path_update#######################################
         ##BERT pretrained
         # import BERT-base pretrained model
         self.bert  = DistilBertModel.from_pretrained('distilbert-base-uncased')
@@ -461,7 +461,7 @@ class BertFPModel(pl.LightningModule):
         self.dev_perf   = {'vader': 0, 'flair': 0, 'sent': 0, 'subj': 0,'emotion': 0, 'mean': 0}
         self.test_perf  = {'vader': 0, 'flair': 0, 'sent': 0, 'subj': 0,'emotion': 0, 'mean': 0}
         self.naspect = 0
-        ###############kishore_update#######################################
+        ###############path_update#######################################
         ##BERT pretrained
         # import BERT-base pretrained model
         self.bert  = DistilBertModel.from_pretrained('distilbert-base-uncased')
