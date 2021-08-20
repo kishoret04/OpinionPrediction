@@ -267,8 +267,8 @@ def main():
     print('current directory: ', os.getcwd() )
 
     ## NEW LAB PATH
-    output_folder_orig = '/disk2/kishore/kishore_data/outlets'#'/home/kishore/kishore_data/outlets'
-    data_folder_orig =  '/disk2/kishore/fan_backup/Old_code/news/outlets'#'/home/kishore/fan_backup/Old_code/news/outlets'
+    output_folder_orig = '/disk2/~/~_data/outlets'#'/home/~/~_data/outlets'
+    data_folder_orig =  '/disk2/~/~_backup/Old_code/news/outlets'#'/home/~/~_backup/Old_code/news/outlets'
 
     #outlet_list = [ 'Archiveis','wsj', 'NewYorkTimes', 'theguardian','DailyMail' ,'foxnews' ]#]
     outlet_list = [ 'NewYorkTimes']#'Archiveis','theguardian','DailyMail' ,'wsj', 'foxnews' ]
