@@ -40,8 +40,8 @@ def get_outlet_metrics(given_outlet):
     
 def main():
     print( 'current path: ', os.getcwd())
-    print(' changing default directory to ', '/disk2/kishore/home')
-    os.chdir('/disk2/kishore/home')
+    print(' changing default directory to ', '/disk2/~/home')
+    os.chdir('/disk2/~/home')
     print( 'current path: ', os.getcwd())
     wandb.init(project="fp_lightning")
 
@@ -50,7 +50,7 @@ def main():
     arg_parser = args_util.add_model_args(arg_parser)
     args = arg_parser.parse_args()
 
-    #kishore update parameters
+    #~ update parameters
     args_dict = vars(args)
     # args_dict['sel_model'] = 'electra'
     # pl.seed_everything(args.random_seed)
@@ -88,8 +88,8 @@ def main():
               'previous_comment_cnt': args.previous_comment_cnt,
               'min_comment_cnt': args.min_comment_cnt,
               'max_seq_len': args.max_seq_len,
-              'max_title_len': args.max_title_len, #kishore_update
-              'max_comment_len': args.max_comment_len, #kishore_update
+              'max_title_len': args.max_title_len, #~_update
+              'max_comment_len': args.max_comment_len, #~_update
               'prob_to_full': args.prob_to_full,
               'sentiment_fingerprinting': args.sentiment_fingerprinting,
               'emotion_fingerprinting': args.emotion_fingerprinting,
@@ -110,13 +110,13 @@ def main():
               }
     
     ########setting argument config#######
-    # python /disk2/kishore/code/fingerprint_lightning/dfp_main_V2.py --root_folder /disk2/kishore/kishore_data/outlets 
+    # python /disk2/~/code/fingerprint_lightning/dfp_main_V2.py --root_folder /disk2/~/~_data/outlets 
     # --batch_size 32 --grad_clip 0.8 --previous_comment_cnt 12 --freeze_bert False --gpu_id 0 --sel_model bert 
     # --outlet Archiveis --input_examples pickle_inputs/shist_analysis_2871265.pkl --model_type staticfpe 
     # --history_type static --load_checkpoint True --path_checkpoint 
-    # /disk2/kishore/home/wandb/run-20210121_173938-3doo9bau/files/fp_lightning/3doo9bau/checkpoints/staticfpe-Archiveis-bert-frozTrue-bs128-epoch=08-avg_val_acc=0.5935.ckpt
+    # /disk2/~/home/wandb/run-20210121_173938-3doo9bau/files/fp_lightning/3doo9bau/checkpoints/staticfpe-Archiveis-bert-frozTrue-bs128-epoch=08-avg_val_acc=0.5935.ckpt
     #  --only_test True
-    # config['root_folder'] ='/disk2/kishore/kishore_data/outlets' 
+    # config['root_folder'] ='/disk2/~/~_data/outlets' 
     # config['batch_size'] = 19
     # config['rnn_type'] = 'gru' 
     # config['dropout'] = 0.2 
@@ -126,7 +126,7 @@ def main():
     # config['gpu_id'] = [0]
     # config['epoch'] = 20 
     # config['load_checkpoint'] = True
-    # config['path_checkpoint'] = '/disk2/kishore/home/wandb/run-20210121_173938-3doo9bau/files/fp_lightning/3doo9bau/checkpoints/staticfpe-Archiveis-bert-frozTrue-bs128-epoch=08-avg_val_acc=0.5935.ckpt'
+    # config['path_checkpoint'] = '/disk2/~/home/wandb/run-20210121_173938-3doo9bau/files/fp_lightning/3doo9bau/checkpoints/staticfpe-Archiveis-bert-frozTrue-bs128-epoch=08-avg_val_acc=0.5935.ckpt'
     # config['sel_model'] = 'bert'
     # config['input_examples'] ='pickle_inputs/shist_analysis_2871265.pkl'
     # config['outlet'] = 'Archiveis'
@@ -153,7 +153,7 @@ def main():
     wandb_save(wandb_logger, config)
     outlet = config['outlet']
     # outlet_list = [ 'DailyMail' ,'foxnews', 'theguardian', 'wsj','Archiveis']#, 'NewYorkTimes']
-    # for outlet in [ 'NewYorkTimes'] : #,'Archiveis', 'wsj',]:  # os.listdir(args.root_folder): #kishore_update
+    # for outlet in [ 'NewYorkTimes'] : #,'Archiveis', 'wsj',]:  # os.listdir(args.root_folder): #~_update
     print("Working on {} ...".format(outlet))
     output_folder = os.path.join( config['root_folder'], outlet)    
     input_examples_pkl = os.path.join(output_folder, config['input_examples'])

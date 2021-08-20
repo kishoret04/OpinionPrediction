@@ -42,8 +42,8 @@ def get_outlet_metrics(given_outlet):
     
 def main():
     print( 'current path: ', os.getcwd())
-    print(' changing default directory to ', '/disk2/kishore/home')
-    os.chdir('/disk2/kishore/home')
+    print(' changing default directory to ', '/disk2/~/home')
+    os.chdir('/disk2/~/home')
     print( 'current path: ', os.getcwd())
     wandb.init(project="fp_lightning")
 
@@ -52,7 +52,7 @@ def main():
     arg_parser = args_util.add_model_args(arg_parser)
     args = arg_parser.parse_args()
 
-    #kishore update parameters
+    #~ update parameters
     args_dict = vars(args)
     # args_dict['sel_model'] = 'electra'
     # pl.seed_everything(args.random_seed)
@@ -90,8 +90,8 @@ def main():
               'previous_comment_cnt': args.previous_comment_cnt,
               'min_comment_cnt': args.min_comment_cnt,
               'max_seq_len': args.max_seq_len,
-              'max_title_len': args.max_title_len, #kishore_update
-              'max_comment_len': args.max_comment_len, #kishore_update
+              'max_title_len': args.max_title_len, #~_update
+              'max_comment_len': args.max_comment_len, #~_update
               'prob_to_full': args.prob_to_full,
               'sentiment_fingerprinting': args.sentiment_fingerprinting,
               'emotion_fingerprinting': args.emotion_fingerprinting,
@@ -111,13 +111,13 @@ def main():
               }
     
     ########setting the config#######
-    #python /disk2/kishore/code/fingerprint_lightning/model_analysis.py --root_folder /disk2/kishore/kishore_data/outlets 
+    #python /disk2/~/code/fingerprint_lightning/model_analysis.py --root_folder /disk2/~/~_data/outlets 
     # --batch_size 512 --grad_clip 0.8 --previous_comment_cnt 15 --freeze_bert True --gpu_id 1 --sel_model electra 
     # --outlet Archiveis --input_examples model_analysis/dhist_topicanal_topic3_03182021_133608.pkl --model_type dynamicfpe 
     # --history_type dynamic --load_checkpoint True 
-    # --path_checkpoint /disk2/kishore/home/wandb/run-20210123_011341-3fs2hr67/files/fp_lightning/3fs2hr67/checkpoints/dynamicfpe-Archiveis-electra-frozTrue-bs256-epoch=02-avg_val_acc=0.5979.ckpt 
+    # --path_checkpoint /disk2/~/home/wandb/run-20210123_011341-3fs2hr67/files/fp_lightning/3fs2hr67/checkpoints/dynamicfpe-Archiveis-electra-frozTrue-bs256-epoch=02-avg_val_acc=0.5979.ckpt 
     # --only_test True
-    # config['root_folder'] ='/disk2/kishore/kishore_data/outlets' 
+    # config['root_folder'] ='/disk2/~/~_data/outlets' 
     # config['batch_size'] = 512
     # config['dropout'] = 0.2 
     # config['grad_clip'] = 0.8
@@ -126,7 +126,7 @@ def main():
     # config['gpu_id'] = [1]
     # config['epoch'] = 5 
     # config['load_checkpoint'] = True
-    # config['path_checkpoint'] = '/disk2/kishore/home/wandb/run-20210123_011341-3fs2hr67/files/fp_lightning/3fs2hr67/checkpoints/dynamicfpe-Archiveis-electra-frozTrue-bs256-epoch=02-avg_val_acc=0.5979.ckpt'
+    # config['path_checkpoint'] = '/disk2/~/home/wandb/run-20210123_011341-3fs2hr67/files/fp_lightning/3fs2hr67/checkpoints/dynamicfpe-Archiveis-electra-frozTrue-bs256-epoch=02-avg_val_acc=0.5979.ckpt'
     # config['sel_model'] = 'electra'
     # config['input_examples'] ='model_analysis/dhist_topicanal_topic3_03182021_133608.pkl'
     # config['outlet'] ='Archiveis'
