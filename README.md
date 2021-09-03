@@ -101,4 +101,4 @@
   --path_checkpoint ~/checkpoints/staticfpe-Archiveis-bert-frozTrue-bs128-epoch=08-avg_val_acc=0.5935.ckpt 
   --only_test True
 
-4. Data is available at https://bit.ly/3kLwH3L
+4. Data is available at https://bit.ly/3kLwH3L or https://bit.ly/3te80Rp
